@@ -15,3 +15,6 @@ function prompt {
     $LASTEXITCODE = $origLastExitCode
     "$('>' * ($nestedPromptLevel + 1)) "
 }
+
+$ProfileRoot = (Split-Path -Parent $MyInvocation.MyCommand.Path)
+$env:Path += ";$ProfileRoot\Scripts"
