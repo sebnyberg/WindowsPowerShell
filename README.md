@@ -12,7 +12,7 @@ $after = "MyReplacedString"
 foreach ($file in $files)
 {
   (Get-Content $file).replace($before, $after) 
-  | Set-Content $file
+  | Set-Content $file.PSPath
 }
 ```
 
